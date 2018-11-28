@@ -1,0 +1,48 @@
+ext {
+	springVersion = "4.3.3.RELEASE"
+	groovyVersion = '1.0-groovy-2.3'
+}
+
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		//使用1.5.2.RELEASE版本的Spring框架
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.2.RELEASE")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+//生成的jar包包名和版本
+jar {
+	baseName = 'study-example'
+	version =  '0.0.1-SNAPSHOT'
+}
+
+repositories {
+	mavenCentral()
+}
+
+//设置jdk的版本
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+	compile group: 'junit', name: 'junit', version: '4.12'
+	compile group: 'com.alibaba', name: 'dubbo', version: '2.5.4'
+	compile group: 'com.alibaba', name: 'fastjson', version: '1.2.47'
+	compile group: 'commons-io', name: 'commons-io', version: '2.5'
+	compile group: 'com.google.code.gson', name: 'gson', version: '2.8.5'
+	compile group: 'commons-lang', name: 'commons-lang', version: '2.6'
+	compile group: 'javax.mail', name: 'mail', version: '1.5.0-b01'
+	compile group: 'org.apache.httpcomponents', name: 'httpcore', version: '4.4.1'
+	compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.4.1'
+	compile group: 'com.google.code.gson', name: 'gson', version: '2.8.0'
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+	testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+	testCompile group: 'org.spockframework', name: 'spock-core', version: "${groovyVersion}"
+	testCompile group: 'org.spockframework', name: 'spock-spring', version: "${groovyVersion}"
+}
