@@ -4,8 +4,9 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
-import my.jdk.aspects.utils.Say;
-import my.jdk.aspects.utils.SayHelloImpl;
+import com.pop.test.jdk.reflect.bean.Say;
+import com.pop.test.jdk.reflect.bean.SayHelloImpl;
+
 
 /**
  * 方法没有声明抛出异常也可以抛出非运行时异常
