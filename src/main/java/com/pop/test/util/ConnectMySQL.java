@@ -8,6 +8,7 @@ import java.sql.Statement;
 
 public class ConnectMySQL {
 
+
         public static void main(String[] args){
 
             // 驱动程序名
